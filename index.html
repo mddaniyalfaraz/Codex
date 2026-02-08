@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Legal Book Downloads</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f7fb;
+        --card: #ffffff;
+        --text: #1b1b1f;
+        --muted: #5b5b66;
+        --accent: #2f6fed;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14141a;
+          --card: #1f1f28;
+          --text: #f0f0f5;
+          --muted: #a3a3b3;
+          --accent: #7aa2ff;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      header {
+        padding: 48px 20px 24px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+      }
+
+      header p {
+        color: var(--muted);
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px 48px;
+      }
+
+      .notice {
+        background: var(--card);
+        border-radius: 14px;
+        padding: 16px 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        margin-bottom: 24px;
+      }
+
+      .notice strong {
+        color: var(--accent);
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .card a {
+        text-decoration: none;
+        color: #fff;
+        background: var(--accent);
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 0 20px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Legal Book Downloads</h1>
+      <p>
+        This page lets me download the books I legally own on this computer.
+        Add your own files in the <code>books/</code> folder and update the list below.
+      </p>
+    </header>
+
+    <main>
+      <section class="notice">
+        <strong>Tip:</strong> Place your files in a <code>books</code> folder next to this
+        HTML file (for example <code>books/my-book.pdf</code>). You can then link to them
+        with <code>href="books/my-book.pdf"</code>.
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>The Art of Focus</h2>
+          <p>PDF • Personal copy</p>
+          <a href="books/the-art-of-focus.pdf" download>Download</a>
+        </article>
+
+        <article class="card">
+          <h2>Gardening Basics</h2>
+          <p>EPUB • Personal copy</p>
+          <a href="books/gardening-basics.epub" download>Download</a>
+        </article>
+
+        <article class="card">
+          <h2>Programming Notes</h2>
+          <p>PDF • Personal copy</p>
+          <a href="books/programming-notes.pdf" download>Download</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Only include books you own or have the rights to distribute.</p>
+    </footer>
+  </body>
+</html>
